@@ -1,0 +1,6 @@
+start n = node(*) where n.likeCount>100 return n.name
+start n = node(*) return n order by n.viewCount DESC limit 5
+start n = node(*) where n.name='1c4ZO7_wZqc' set n.viewcount = 0 return n
+start n = node(*) where n.likeCount>100 match p = (n)-[r]-> () return count(p)
+start n=node(*) match (n)-[r]-() where r is null return n
+

@@ -1,0 +1,10 @@
+db.test_collection.find({"videoInfo.snippet.channelId":"UcttspZesZIDEwwpVIgoZtWQ"}).count();
+
+
+db.test_collection.find({"videoInfo.statistics.likeCount":{$gt:100}}).count();
+
+
+db.test_collection.find({"videoInfo.statistics.dislikeCount":{$gt:100}},{"videoInfo.statistics.dislikeCount":{$lt:200}}).count();
+
+
+
